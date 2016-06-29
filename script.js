@@ -1,6 +1,12 @@
 var sessionLength = 25;
 var breakLength = 5;
 
+if (changedSth == true) {
+  console.log("New branch");
+} else {
+  alert("Old branch");
+}
+
 $(document).ready(function(){
    $(".switchAddSession").on("click", function(){
        sessionLength += 1;
