@@ -18,6 +18,7 @@ body {
     height: 400px;
     border-radius: 400px;
     margin: 50px auto;
+    cursor: pointer;
 }
 
 .controls {
