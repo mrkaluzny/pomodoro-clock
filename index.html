@@ -18,17 +18,17 @@
             <div class="col-xs-6 controls">
                 <h4>Break Length</h4>
                 <div class="btn-group">
-                    <div class="btn btn-default btn-lg switchDeduceBreak">-</div>
-                    <div class="btn btn-lg" id="timer-break">1</div>
-                    <div class="btn btn-default btn-lg switchAddBreak">+</div>
+                    <div class="btn btn-default btn-lg switchDeduceBreak" onclick="deduceBreakTime()">-</div>
+                    <div class="btn btn-lg" id="timer-break">5</div>
+                    <div class="btn btn-default btn-lg switchAddBreak" onclick="addBreakTime()">+</div>
                 </div>
             </div>
             <div class="col-xs-6 controls">
                 <h4>Session Length</h4>
                 <div class="btn-group">
-                    <div class="btn btn-default btn-lg switchDeduceSession">-</div>
+                    <div class="btn btn-default btn-lg switchDeduceSession" onclick="deduceSessionTime()">-</div>
                     <div id="timer-session" class="btn btn-lg">25</div>
-                    <div class="btn btn-default btn-lg switchAddSession">+</div>
+                    <div class="btn btn-default btn-lg switchAddSession" onclick="addSessionTime()">+</div>
                 </div>
             </div>
         </div>
