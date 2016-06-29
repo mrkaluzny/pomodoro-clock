@@ -3,12 +3,17 @@ var breakLength = 5;
 var alarm = new Audio('alarm.mp3');
 var loop = 0;
 
+function btnReset() {
+    $('#sessionName').text('Current Session');
+    clearInterval(countInt);
+}
+
 
 function addSessionTime() {
-       sessionLength += 1;
-       $("#timer-session").text(sessionLength);
-       $("#timeLeft").text(sessionLength);
-    clearInterval(countInt);
+    sessionLength += 1;
+    $("#timer-session").text(sessionLength);
+    $("#timeLeft").text(sessionLength);
+    btnReset();
 }
 
 function deduceSessionTime() {
@@ -19,7 +24,7 @@ function deduceSessionTime() {
     }
     $("#timer-session").text(sessionLength);
     $("#timeLeft").text(sessionLength);
-    clearInterval(countInt);
+    btnReset();
 }
 
 function deduceBreakTime() {
@@ -29,24 +34,22 @@ function deduceBreakTime() {
         breakLength = 1;
     }
     $("#timer-break").text(breakLength);
-    clearInterval(countInt);
+    btnReset();
 }
 
 function addBreakTime(){
     breakLength += 1;
     $("#timer-break").text(breakLength);
-    clearInterval(countInt);
+    btnReset();
 }
 
 function startTimer() {
-    minutes = sessionLength;
     seconds = 0;
     countDown(sessionLength, seconds);
 }
 
 function countDown(m,s) {
     countInt = setInterval(function(){
-    timeLeft;
         
     if (m == 0 && s == 0) {
         clearInterval(countInt);
@@ -83,5 +86,5 @@ function reset() {
     $("#timer-session").text(sessionLength);
     $("#timeLeft").text(sessionLength);
     $("#timer-break").text(breakLength);
-    clearInterval(countInt);
+    btnReset();
 }
