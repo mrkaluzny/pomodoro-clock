@@ -83,6 +83,8 @@ function countDown(m,s) {
 }
 
 function reset() {
+    sessionLength = 25;
+    breakLength = 5;
     $("#timer-session").text(sessionLength);
     $("#timeLeft").text(sessionLength);
     $("#timer-break").text(breakLength);
