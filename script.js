@@ -43,19 +43,25 @@ function startTimer() {
 
 function countDown(m,s) {
     var countInt = setInterval(function(){
-        var timeLeft;
-    if (s == 0) {
+    var timeLeft;
+        
+    if (m == 0 && s == 0) {
+        clearInterval(countInt);
+        timeLeft = breakLength;
+    } else if (s != 0) {
+        if (s <= 10){
+            s -= 1;
+            timeLeft = m + ':0' + s;
+        } else {
+            s -= 1;
+            timeLeft = m + ':' + s;
+        }
+    } else if (s == 0) {
         s = 59;
         m -= 1;
         timeLeft = m + ':' + s;
+    }
         $('#timeLeft').text(timeLeft);
-    } else if (s != 0) {
-        s -= 1;
-        timeLeft = m + ':' + s;
-        $('#timeLeft').text(timeLeft);
-    } else if (s == 0 && m == 0) {
-        alert('Done!');
-        clearInterval(countInt);
-    }   
+        
     }, 1000);
 }
