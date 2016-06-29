@@ -1,0 +1,91 @@
+body {
+    background-color: #292F36;
+    color: #14CC60;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+.navabar {
+    text-align: center;
+    padding: 60px;
+    font-size: 4.3em;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.controls div {
+    display: block;
+    float: left;
+    margin: 5px;
+    font-size: 30px;
+
+}
+
+.controls {
+    margin: auto;
+    padding-left: 130px
+}
+
+.clock-controls div {
+    display: inline;
+    float: left;
+    margin: 20px;
+    text-align: center;
+}
+
+.session {
+    width: 40%;
+    margin: auto;
+}
+
+.break {
+    width: 40%;
+    margin: auto;
+}
+
+.switchAddSession, .switchAddBreak, .switchDeduceBreak, .switchDeduceSession {
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    transition: 0s color;
+}
+
+.switchAddSession:hover,
+.switchAddBreak:hover,
+.switchDeduceBreak:hover,
+.switchDeduceSession:hover {
+    color:yellow;
+    transition-delay: 150ms;
+}
+
+.control-title, #timer-session, #timer-break {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+.countdown-clock {
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    margin: 340px auto;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    border: 2px solid;
+    border-radius: 400px;
+}
+
+.countdown-timer {
+    margin-top: 120px;
+}
+
+#timeLeft {
+    margin-top: 0px;
+    font-weight: 100;
+    font-size: 2.9em;
+}
