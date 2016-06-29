@@ -1,14 +1,12 @@
 var sessionLength = 25;
 var breakLength = 5;
-var countdown;
-var timeLeft;
-var seconds;
-var minutes;
+
 
 function addSessionTime (){
        sessionLength += 1;
        $("#timer-session").text(sessionLength);
        $("#timeLeft").text(sessionLength);
+    clearInterval(countInt);
 }
 
 function deduceSessionTime(){
@@ -19,6 +17,7 @@ function deduceSessionTime(){
     }
     $("#timer-session").text(sessionLength);
     $("#timeLeft").text(sessionLength);
+    clearInterval(countInt);
 }
 
 function deduceBreakTime() {
@@ -28,11 +27,13 @@ function deduceBreakTime() {
         breakLength = 1;
     }
     $("#timer-break").text(breakLength);
+    clearInterval(countInt);
 }
 
 function addBreakTime(){
     breakLength += 1;
     $("#timer-break").text(breakLength);
+    clearInterval(countInt);
 }
 
 function startTimer() {
@@ -42,8 +43,8 @@ function startTimer() {
 }
 
 function countDown(m,s) {
-    var countInt = setInterval(function(){
-    var timeLeft;
+    countInt = setInterval(function(){
+    timeLeft;
         
     if (m == 0 && s == 0) {
         clearInterval(countInt);
