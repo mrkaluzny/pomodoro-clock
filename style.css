@@ -12,6 +12,8 @@ body {
     border-left: 4px solid slategray;
 }
 
+.white{color:white;}
+
 .countdown-clock {
     border: 2px solid black;
     width: 400px;
